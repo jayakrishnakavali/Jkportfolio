@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jayakrishna Kavali | DevOps Engineer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f5f7fa;
+      --text-color: #222;
+      --card-bg: #fff;
+      --accent: #0078ff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #0d1117;
+      --text-color: #e6edf3;
+      --card-bg: #161b22;
+      --accent: #58a6ff;
+      --shadow: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1.5rem;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    header p {
+      color: var(--text-color);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      cursor: pointer;
+      background: var(--card-bg);
+      border: 1px solid var(--shadow);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.05);
+    }
+
+    nav {
+      text-align: center;
+      background: var(--card-bg);
+      padding: 1rem;
+      box-shadow: 0 2px 5px var(--shadow);
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 3rem 10%;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .intro {
+      text-align: center;
+    }
+
+    .intro img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 1rem;
+      border: 3px solid var(--accent);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--card-bg);
+      margin-top: 3rem;
+      box-shadow: 0 -2px 5px var(--shadow);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
+    <h1>Jayakrishna Kavali</h1>
+    <p>Senior DevOps Engineer | AWS | Kubernetes | Terraform | CI/CD</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="intro">
+    <img src="https://via.placeholder.com/150" alt="Profile Picture" />
+    <h2>About Me</h2>
+    <p>
+      I’m a passionate DevOps Engineer with over 5 years of experience building scalable, secure, and automated cloud infrastructures.
+      Skilled in AWS, Kubernetes, Jenkins, Terraform, and CI/CD pipelines — I love solving real-world infrastructure challenges.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Highlighted Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>🏗 AWS EKS Terraform Deployment</h3>
+        <p>Automated end-to-end EKS cluster setup using Terraform with Helm, IAM roles, OIDC, and add-ons integration.</p>
+      </div>
+      <div class="project">
+        <h3>⚙️ NCS Upgrade Automation</h3>
+        <p>Developed Ansible playbooks to automate Nokia Container Services (NCS) upgrades for T-Mobile clusters.</p>
+      </div>
+      <div class="project">
+        <h3>☁️ CI/CD for Banking Applications</h3>
+        <p>Implemented secure Azure DevOps pipelines with SonarQube, Key Vault, and OWASP compliance for ABSA Bank.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:jayakrishna.kavali@infinite.com">jayakrishna.kavali@infinite.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/jayakrishnakavali" target="_blank">linkedin.com/in/jayakrishnakavali</a></p>
+    <p>GitHub: <a href="https://github.com/jayakrishnakavali" target="_blank">github.com/jayakrishnakavali</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Jayakrishna Kavali | Built with ❤️ using HTML, CSS & JavaScript</p>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById("themeToggle");
+    const root = document.documentElement;
+
+    toggle.addEventListener("click", () => {
+      if (root.getAttribute("data-theme") === "dark") {
+        root.removeAttribute("data-theme");
+        toggle.textContent = "🌙 Dark Mode";
+      } else {
+        root.setAttribute("data-theme", "dark");
+        toggle.textContent = "☀️ Light Mode";
+      }
+    });
+
+    // Reveal on scroll animation
+    const sections = document.querySelectorAll("section");
+    const reveal = () => {
+      const trigger = window.innerHeight / 1.2;
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < trigger) sec.classList.add("visible");
+      });
+    };
+    window.addEventListener("scroll", reveal);
+    reveal();
+  </script>
+</body>
+</html>
